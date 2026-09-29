@@ -6,77 +6,55 @@
         <mxCell id="1" parent="0" />
         
         <!-- Usuario -->
-        <object c4Name="Usuario TechStore" c4Type="Person" c4Description="Cliente que explora catálogo, añade productos al carrito y realiza compras." id="user">
-          <mxCell parent="1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#1F2937;strokeColor=#111827;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;" vertex="1">
-            <mxGeometry height="160" width="180" x="40" y="280" as="geometry" />
-          </mxCell>
-        </object>
+        <mxCell id="user" value="&lt;b&gt;Usuario TechStore&lt;/b&gt;&lt;br&gt;[Persona]&lt;br&gt;&lt;br&gt;Cliente que explora el catálogo, añade productos al carrito y realiza compras." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F2937;fontColor=#ffffff;strokeColor=#111827;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="180" height="140" as="geometry" />
+        </mxCell>
 
-        <!-- System Boundary -->
-        <object c4Name="Sistema TechStore" c4Type="SystemScopeBoundary" c4Application="Plataforma de E-commerce" id="boundary">
-          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=10;fillColor=none;strokeColor=#4B5563;fontColor=#111827;align=left;verticalAlign=top;dashPattern=8 4;spacing=15;" vertex="1">
-            <mxGeometry height="520" width="560" x="280" y="100" as="geometry" />
-          </mxCell>
-        </object>
+        <!-- Boundary -->
+        <mxCell id="boundary" value="&lt;b&gt;Sistema TechStore&lt;/b&gt; [Límite del Sistema]" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fillColor=none;strokeColor=#4B5563;fontColor=#111827;align=left;verticalAlign=top;spacing=15;" vertex="1" parent="1">
+          <mxGeometry x="270" y="100" width="580" height="480" as="geometry" />
+        </mxCell>
 
         <!-- Frontend -->
-        <object c4Name="Frontend Web / App" c4Type="Container" c4Technology="React / Vue / Mobile App" c4Description="Interfaz cliente para navegar, gestionar carrito y autenticarse." id="frontend">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#0D9488;fontColor=#ffffff;align=center;strokeColor=#0F766E;" vertex="1">
-            <mxGeometry height="120" width="220" x="320" y="180" as="geometry" />
-          </mxCell>
-        </object>
+        <mxCell id="frontend" value="&lt;b&gt;Frontend Web / App&lt;/b&gt;&lt;br&gt;[Contenedor: React / App Móvil]&lt;br&gt;&lt;br&gt;Interfaz cliente para navegar, gestionar carrito y autenticarse." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0D9488;fontColor=#ffffff;strokeColor=#0F766E;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="160" width="230" height="120" as="geometry" />
+        </mxCell>
 
         <!-- Backend -->
-        <object c4Name="Backend API Service" c4Type="Container" c4Technology="Node.js / Express" c4Description="Gestiona lógica de inventario, validación de datos, ordenes y pagos." id="backend">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#0F766E;fontColor=#ffffff;align=center;strokeColor=#115E59;" vertex="1">
-            <mxGeometry height="120" width="220" x="320" y="420" as="geometry" />
-          </mxCell>
-        </object>
+        <mxCell id="backend" value="&lt;b&gt;Backend API Service&lt;/b&gt;&lt;br&gt;[Contenedor: Node.js / Express]&lt;br&gt;&lt;br&gt;Gestiona la lógica de inventario, validación de datos, órdenes y pagos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F766E;fontColor=#ffffff;strokeColor=#115E59;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="310" y="400" width="230" height="120" as="geometry" />
+        </mxCell>
 
         <!-- Database -->
-        <object c4Name="TechStoreDB (SQL)" c4Type="ContainerDb" c4Technology="PostgreSQL / MySQL" c4Description="Almacena Usuarios, Productos, Ordenes y Pagos. Soporta DDL, DML y TCL." id="database">
-          <mxCell parent="1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#047857;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#065F46;" vertex="1">
-            <mxGeometry height="140" width="200" x="600" y="410" as="geometry" />
-          </mxCell>
-        </object>
+        <mxCell id="database" value="&lt;b&gt;TechStoreDB (SQL)&lt;/b&gt;&lt;br&gt;[Contenedor: PostgreSQL / MySQL]&lt;br&gt;&lt;br&gt;Almacena Usuarios, Productos, Órdenes y Pagos. Soporta DDL, DML y TCL." style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#047857;fontColor=#ffffff;strokeColor=#065F46;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="610" y="380" width="210" height="150" as="geometry" />
+        </mxCell>
 
-        <!-- External Payment Gateway -->
-        <object c4Name="Pasarela de Pagos Externa" c4Type="Software System" c4Description="Servicio externo (Stripe/Webpay) que procesa pagos con tarjeta de forma segura." id="gateway">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4B5563;fontColor=#ffffff;align=center;strokeColor=#374151;" vertex="1">
-            <mxGeometry height="120" width="200" x="900" y="420" as="geometry" />
-          </mxCell>
-        </object>
+        <!-- External Gateway -->
+        <mxCell id="gateway" value="&lt;b&gt;Pasarela de Pagos Externa&lt;/b&gt;&lt;br&gt;[Sistema Externo: Webpay / Stripe]&lt;br&gt;&lt;br&gt;Procesa transacciones con tarjeta de forma segura." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4B5563;fontColor=#ffffff;strokeColor=#374151;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="900" y="400" width="210" height="120" as="geometry" />
+        </mxCell>
 
         <!-- Connectors -->
-        <mxCell id="c1" edge="1" parent="1" source="user" target="frontend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;">
+        <mxCell id="c1" value="Navegación / HTTPS / TLS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;fontColor=#374151;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="user" target="frontend">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c1_text" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontColor=#374151;fontSize=10;" value="Navegación / HTTPS / TLS" vertex="1">
-          <mxGeometry height="20" width="150" x="190" y="220" as="geometry" />
         </mxCell>
 
-        <mxCell id="c2" edge="1" parent="1" source="frontend" target="backend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;">
+        <mxCell id="c2" value="API REST (JSON / HTTPS)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;fontColor=#374151;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="frontend" target="backend">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c2_text" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontColor=#374151;fontSize=10;" value="API REST (JSON / HTTPS)" vertex="1">
-          <mxGeometry height="20" width="150" x="365" y="340" as="geometry" />
         </mxCell>
 
-        <mxCell id="c3" edge="1" parent="1" source="backend" target="database" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;">
+        <mxCell id="c3" value="Consultas Parametrizadas &amp; TCL&#xa;(START TRANSACTION, COMMIT, ROLLBACK)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;fontColor=#374151;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="backend" target="database">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c3_text" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontColor=#374151;fontSize=10;" value="Consultas Parametrizadas &amp; TCL&#xa;(START TRANSACTION, COMMIT, ROLLBACK)" vertex="1">
-          <mxGeometry height="30" width="220" x="480" y="445" as="geometry" />
         </mxCell>
 
-        <mxCell id="c4" edge="1" parent="1" source="backend" target="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;">
+        <mxCell id="c4" value="API HTTPS / Tokenización" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#374151;strokeWidth=2;fontColor=#374151;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="backend" target="gateway">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="c4_text" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontColor=#374151;fontSize=10;" value="API HTTPS / Tokenización" vertex="1">
-          <mxGeometry height="20" width="150" x="650" y="320" as="geometry" />
         </mxCell>
 
       </root>
     </mxGraphModel>
   </diagram>
 </mxfile>
+
+
